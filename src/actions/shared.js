@@ -12,7 +12,7 @@ import { setAuthedUser } from './authedUser'
 
 
 //  export handle initial data function
-export function handelInitialData(userId) {
+export default function handelInitialData(userId) {
     return (dispatch) => {
         dispatch(showLoading())
             return getInitialData()
