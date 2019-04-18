@@ -17,6 +17,11 @@ class LogIn extends Component {
         return (
             <div className='vote-container'>
                 <h2>Who are you</h2>
+                {userIds.map((id => (
+                    <div key={id}>
+                        {/* User Component */}
+                    </div>
+                )))}
             </div>
         )
     }
