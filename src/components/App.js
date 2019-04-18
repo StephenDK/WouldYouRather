@@ -7,7 +7,7 @@ import handleInitialData from '../actions/shared'
 import '../styles/App.css';
 
 // Components
-import Dashboard from './Dashboard'
+// import Dashboard from './Dashboard'
 
 class App extends Component {
   componentWillMount() {
