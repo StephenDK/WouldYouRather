@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Question from './Question'
-
+import '../styles/dashboard.css'
 import { createSelector } from 'reselect'
 
 class Dashboard extends Component {
@@ -53,7 +53,7 @@ class Dashboard extends Component {
   }
 }
 
-const fetchUnansweredQuestions = createSelector(
+const getUnansweredQuestions = createSelector(
   state => state.questions,
   state => Object.keys(state.users[state.authedUser].answers),
   state => Object.keys(state.questions),
@@ -63,7 +63,7 @@ const fetchUnansweredQuestions = createSelector(
       .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
 )
 
-const fetchAnsweredQuestions = createSelector(
+const getAnsweredQuestions = createSelector(
   state => state.questions,
   state => Object.keys(state.users[state.authedUser].answers),
   (questions, answers) =>
@@ -75,8 +75,8 @@ function mapStateToProps(state) {
   return {
     users,
     questions,
-    answeredQuestions: fetchAnsweredQuestions(state),
-    unansweredQuestions: fetchUnansweredQuestions(state)
+    answeredQuestions: getAnsweredQuestions(state),
+    unansweredQuestions: getUnansweredQuestions(state)
   }
 }
 
