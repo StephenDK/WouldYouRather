@@ -23,7 +23,7 @@
 
 <li>Next clone project from github. Run the command below.</li>
 <pre>
-	<code>git clone https://github.com/StephenDK/My_Reads.git</code>
+	<code>git clone "https://github.com/StephenDK/WouldYouRather.git"</code>
 </pre>
 
 
