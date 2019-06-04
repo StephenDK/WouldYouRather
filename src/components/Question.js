@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import '../css/question.css'
 import { formatDate } from '../utils/_DATA'
 import { Link } from 'react-router-dom'
 
@@ -9,21 +8,21 @@ class Question extends Component {
     const { question, user, question_id } = this.props
 
     return (
-      <div className="question">
-        <div className="question-title">
+      <div>
+        <div>
           <img src={user.avatarURL} alt="avatar!" className="avatar" />
           <h4>
             {user.name} <small>{formatDate(question.timestamp)}</small>
           </h4>
         </div>
-        <div className="question-body">
+        <div>
           <h5>Would you rather:</h5>
           <p>A: {question.optionOne.text}</p>
           <p>B: {question.optionTwo.text}</p>
         </div>
-        <div className="question-footer">
+        <div>
           <Link to={`/question/${question_id}`}>
-            <button className="vote-button">TAKE A VOTE</button>
+            <button>TAKE A VOTE</button>
           </Link>
         </div>
       </div>

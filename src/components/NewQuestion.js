@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import '../css/new-question.css'
 import { handleSaveQuestion } from '../actions/questions'
 import { Redirect } from 'react-router-dom'
 
@@ -44,7 +43,7 @@ class NewQuestion extends Component {
 
     return (
       <div>
-        <div className="vote-container wyr-form">
+        <div>
           <h2>Would you rather:</h2>
           <form onSubmit={this.createQuestion}>
             <input

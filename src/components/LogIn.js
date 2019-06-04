@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import '../css/login.css'
 import { connect } from 'react-redux'
 import { setAuthedUser } from '../actions/authedUser'
 import User from './User'
@@ -12,7 +11,7 @@ class LogIn extends Component {
   render() {
     const { userIds, location } = this.props
     return (
-      <div className="vote-container">
+      <div>
         <h2>Who are you?</h2>
         {userIds.map(id => (
           <div key={id}>

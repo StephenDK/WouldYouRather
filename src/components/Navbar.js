@@ -9,7 +9,6 @@ class Navbar extends Component {
     return (
       <div className="nav-container">
         <div className="inner-container">
-          {/* <img src={brand} alt="logo" className="nav-brand" /> */}
           {authedUser ? (
             <ul className="nav-list">
               <li className="nav-item">
